@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #fff0f5;
+    color: #4b2e2e;
+    line-height: 1.8;
+    text-align: center;
+}
+
+header {
+    background: #f08080;
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.photo, .declaration, .gallery, .music {
+    background: #ffe4e1;
+}
+
+.story, .moments {
+    background-color: #fffafa;
+}
+
+.photo img, .story img, .declaration img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+#foto {
+    width: 280px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.photo h2, .story h2, .declaration h2, .moments h2, .gallery h2, .music h2 {
+    font-size: 2rem;
+    color: #c71585;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.gallery .fotos {
+.gallery .fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery .fotos img {
+    width: 180px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+}
+
+.gallery .fotos img {
+    width: 180px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery .fotos img:hover {
+    transform: scale(1.05);
+}
+
+.music button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.music button:hover {
+    background-color: #d64f96;
+}
+
+footer {
+    background: #f08080;
+    padding: 20px;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
