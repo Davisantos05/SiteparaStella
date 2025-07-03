@@ -1,79 +1,123 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Amor da Minha Vida</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>O Amor da Minha Vida</h1>
-        <p>Uma história improvável começando com apenas um grupo, mas escrita com carinho, sorrisos e sonhos compartilhados ❤️</p>
-    </header>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section class="photo">
-        <img src="img.lella.jpeg" alt="Nosso momento especial">
-        <h2>Stella Meu Amor</h2>
-        <p>Desde que te conheci, minha vida ganhou mais cor, mais sentido, acordo animado só para te mandar aquele "Bom dia minha princesa", e muito mais amor.</p>
-    </section>
+body {
+    font-family: 'Georgia', serif;
+    background: #fff0f5;
+    color: #4b2e2e;
+    line-height: 1.8;
+    text-align: center;
+}
 
-    <section class="story">
-        <h2>Como Tudo Começou</h2>
-        <br>
-        <img id="foto" src="img.lella2.jpeg" alt="Nosso momento especial">
-        <p>
-            Lembro exatamente do dia em que te vi pela primeira vez, no primeiro encontro de crisma com aqueles óculos sempre lindo lendo a bíblia.
-            Seu sorriso, seu olhar, desde lá tudo em você sempre me encantou.
-            Com o tempo, descobri que por trás da sua beleza, existe uma alma linda, generosa e incrível e cuidadosa que sempre cuida e zela pelo próximo 
-            (mesmo que não goste muito kkkkk).
-        </p>
-    </section>
+/* Cabeçalho */
+header {
+    background: #f08080;
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    <section class="declaration">
-        <h2>Minha Declaração</h2>
-        <br>
-        <img id="foto" src="img.lella3.jpeg" alt="Nosso momento especial">
-        <p>
-            Você é minha inspiração diária. Meu carinho, minha força, meu abraço preferido. <br>
-            Prometo cuidar de você, te apoiar e fazer você sorrir todos os dias. Conte comigo sempre para o que precisar. <br>
-            Eu sempre serei seu amigo, seu parceiro, independente das dificuldades. <br>
-            Estarei aqui para quando você se tornar parteira e uma mãe incrível dos nossos filhos. <br>
-            Eu te amo infinitamente 💘
-        </p>
-    </section>
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
 
-    <section class="moments">
-        <h2>Nossos Momentos</h2>
-        <p>
-            Cada passeio, ligação ou mensagem de bom dia me faz ter certeza de que você é a pessoa certa. <br>
-            Gosto de como você é espontânea, das suas caras engraçadas, do jeito como fala empolgada sobre o que ama. <br><br>
-            Obrigado por me deixar viver tudo isso ao seu lado. Você transforma qualquer instante em algo mágico. 💫
-        </p>
-    </section>
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
 
-    <section class="gallery">
-        <h2>Momentos Inesquecíveis</h2>
-        <div class="fotos">
-            <img src="img1.jpeg.jpeg" alt="Foto 1">
-            <img src="img2.jpeg.jpeg" alt="Foto 2">
-            <img src="img3.jpeg.jpeg" alt="Foto 3">
-            <img src="img4.jpeg.jpeg" alt="Foto 4">
-        </div>
-    </section>
+/* Seções em geral */
+section {
+    padding: 40px 20px;
+}
 
-    <section class="music">
-        <h2>Nossa Música</h2>
-        <p>Clique no botão abaixo para ouvir uma canção que me lembra você 💖</p>
-        <button onclick="document.getElementById('musica').play()">Tocar Nossa Música 🎶</button>
-        <audio id="musica" controls style="margin-top: 15px;">
-            <source src="musica-romantica.mp3.mp3" type="audio/mpeg">
-            Seu navegador não suporta áudio.
-        </audio>
-    </section>
+/* Cores de fundo por seção */
+.photo, .declaration, .gallery, .music {
+    background: #ffe4e1;
+}
 
-    <footer>
-        <p>Feito com amor por Davi 💌</p>
-    </footer>
-</body>
-</html>
+.story, .moments {
+    background-color: #fffafa;
+}
+
+/* Imagens principais */
+.photo img, .story img, .declaration img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+#foto {
+    width: 280px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Títulos das seções */
+.photo h2, .story h2, .declaration h2, .moments h2, .gallery h2, .music h2 {
+    font-size: 2rem;
+    color: #c71585;
+    margin-bottom: 20px;
+}
+
+/* Textos das seções */
+section p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+/* Galeria de fotos - Novo Layout Responsivo */
+.gallery .fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery .fotos img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery .fotos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão da música */
+.music button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.music button:hover {
+    background-color: #d64f96;
+}
+
+/* Rodapé */
+footer {
+    background: #f08080;
+    padding: 20px;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
